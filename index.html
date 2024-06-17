@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Redirect</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            // Generate a random number between 0 and 1
+            var randomNum = Math.random();
+            // If the number is less than 0.5, redirect to Nike; otherwise, redirect to Adidas
+            if (randomNum < 0.5) {
+                window.location.href = "https://www.nike.com";
+            } else {
+                window.location.href = "https://www.adidas.com";
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>If you are not redirected automatically, follow the <a id="redirectLink" href="#">link</a>.</p>
+    <script type="text/javascript">
+        // Set the href of the link based on the random number
+        document.getElementById("redirectLink").href = (Math.random() < 0.5) ? "https://www.nike.com" : "https://www.adidas.com";
+    </script>
+</body>
+</html>
